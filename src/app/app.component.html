@@ -328,8 +328,13 @@
 </div>
 
 <div class="content" role="main">
+<ng-container *ngIf="filters$ | async as filters">
+  {{filters['query']}}
+</ng-container>
 
 
+<button (click)="updateFilters()">Click</button>
+<button (click)="getDate()">Get Data</button>
 </div>
 
 
